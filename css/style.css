@@ -1,0 +1,27 @@
+body{
+    background-color: #faf1e5;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;  
+}
+h1{
+    font-size: 300;
+    text-align: center;
+    
+}
+button{
+    background-color:#9EB384;
+}
+.sbutton{
+    color: black;
+}
+img{
+    height: 200px;
+    width: 400px;
+}
+.heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
