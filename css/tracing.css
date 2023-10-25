@@ -1,0 +1,18 @@
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    display: block;
+  }  
+  
+  h2{
+    background-color: #CEDEBD;
+    border-radius: 20px;
+    border-color: #9EB384 ;
+    text-align: center;
+    height: 75px;
+    width: 300px;
+  }
+  

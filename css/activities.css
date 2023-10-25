@@ -2,6 +2,20 @@ body{
     background-color: #FAF1E4;
 }
 h1{
-    font-size: 300;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+}
+button{
+    background-color: white;
+    font-size: 72;
+    border-radius: 8px;
+    border-color: #435334;
+    height: 50px;
+    width: 200px;
+}
+button:hover {
+    background-color:#9EB384;
+    transition: 0.7s;
 }
