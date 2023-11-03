@@ -14,15 +14,8 @@ body{
   margin: 0;
 
   }
-#sketch-container {
-  background-color: #CEDEBD; /* Change the background color if needed */
-  padding: 10px; /* Add some padding to the canvas container */
-}
   canvas {
     display: block;
-    text-align: center;
-    width: 200px;
-    height: 200px;
     
     
   }  
