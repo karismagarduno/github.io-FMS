@@ -14,7 +14,7 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(700, 700);
   strokeWeight(2);
   noFill();
 
@@ -126,5 +126,6 @@ function hasTracedCoordinate(targetCoord) {
   }
   return false;
 }
+
 
 
