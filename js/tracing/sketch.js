@@ -14,8 +14,7 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(650, 650);
-  canvas.parent('sketch-container');
+  createCanvas(700, 700);
   strokeWeight(2);
   noFill();
 
