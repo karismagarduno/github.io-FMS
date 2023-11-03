@@ -19,3 +19,12 @@ button:hover {
     background-color:#9EB384;
     transition: 0.7s;
 }
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    text-align: center;
+   
+  }

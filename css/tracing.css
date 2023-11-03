@@ -1,18 +1,24 @@
-  html, body {
+  html, body{
     margin: 0;
     padding: 0;
+    background:url("../images/Tracing.png") no-repeat center center fixed;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+
   }
   
   canvas {
     display: block;
   }  
   
-  h2{
+  /*h2{
     background-color: #CEDEBD;
     border-radius: 20px;
     border-color: #9EB384 ;
     text-align: center;
     height: 75px;
     width: 300px;
-  }
+  }*/
   
