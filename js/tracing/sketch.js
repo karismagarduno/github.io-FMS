@@ -43,7 +43,7 @@ function drawDashedCircle(x, y, radius, dashLength) {
 }
 
 function draw() {
-  background(206, 222, 189);
+  background(255);
 
   // Draw dashed circle
   drawDashedCircle(350, 350, circleRadius, 10);
@@ -126,6 +126,7 @@ function hasTracedCoordinate(targetCoord) {
   }
   return false;
 }
+
 
 
 
