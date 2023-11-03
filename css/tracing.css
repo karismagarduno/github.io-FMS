@@ -1,14 +1,23 @@
-  html, body{
-    margin: 0;
-    padding: 0;
+html{
+margin: 0;
+  }
+body{
     background:url("../images/Tracing.png") no-repeat center center fixed;
         -webkit-background-size:cover;
         -moz-background-size:cover;
         -o-background-size:cover;
         background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 
   }
-  
+#sketch-container {
+  background-color: #CEDEBD; /* Change the background color if needed */
+  padding: 10px; /* Add some padding to the canvas container */
+}
   canvas {
     display: block;
     text-align: center;
