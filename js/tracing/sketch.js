@@ -126,4 +126,3 @@ function hasTracedCoordinate(targetCoord) {
   }
   return false;
 }
-
