@@ -43,8 +43,87 @@ function drawDashedCircle(x, y, radius, dashLength) {
 }
 
 function draw() {
-  clear();
+  background(255);
 
   // Draw dashed circle
   drawDashedCircle(350, 350, circleRadius, 10);
+
+  if (isTracing) {
+    let distance = dist(mouseX, mouseY, 350, 350);
+
+    if (distance >= circleRadius - 5 && distance <= circleRadius + 5) {
+      stroke(20, 75, 200);
+      strokeWeight(2);
+      textSize(20);
+
+      isDrawing = true;
+    } else {
+      isDrawing = false;
+
+      if (distance < circleRadius - 5) {
+        fill(20, 75, 200);
+        textSize(20);
+        textAlign(CENTER, CENTER); // Center the text inside the circle
+        text('You are inside the circle', 350, 350); // Display inside the circle
+      } else {
+        fill(300, 50, 50);
+        textSize(20);
+        textAlign(CENTER, CENTER); // Center the text inside the circle
+        text('You are outside the circle', 350, 350); // Display inside the circle
+      }
+    }
+
+    if (isDrawing) {
+      path.push(createVector(mouseX, mouseY));
+
+      let completedTracing = true;
+      for (let targetCoord of targetCoordinates) {
+        if (!hasTracedCoordinate(targetCoord)) {
+          completedTracing = false;
+          break;
+        }
+      }
+
+      if (completedTracing) {
+        textSize(20);
+        fill(0); // Set text color to black
+        textAlign(CENTER, CENTER); // Center the text inside the circle
+        text('Tracing Completed!', 350, 350); // Display inside the circle
+      }
+
+      noFill();
+      beginShape();
+      for (let point of path) {
+        vertex(point.x, point.y);
+      }
+      endShape();
+    }
+  }
 }
+
+function startTracing() {
+  isTracing = true;
+  traceText = 'Trace';
+  path = [];
+  isDrawing = false;
+  tracedCoordinates = [];
+}
+
+function resetTracing() {
+  isTracing = false;
+  traceText = '';
+  isDrawing = false;
+  tracedCoordinates = [];
+}
+
+function hasTracedCoordinate(targetCoord) {
+  for (let point of path) {
+    let distance = dist(point.x, point.y, targetCoord.x, targetCoord.y);
+    if (distance < 5) { 
+      tracedCoordinates.push(targetCoord);
+      return true;
+    }
+  }
+  return false;
+}
+
