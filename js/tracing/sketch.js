@@ -43,7 +43,7 @@ function drawDashedCircle(x, y, radius, dashLength) {
 }
 
 function draw() {
-  background(255);
+  clear();
 
   // Draw dashed circle
   drawDashedCircle(350, 350, circleRadius, 10);
