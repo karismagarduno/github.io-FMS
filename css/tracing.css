@@ -1,5 +1,6 @@
 html{
   margin: 0;
+  padding: 0;
 }
 body{
   background:url("../images/Tracing.png") no-repeat center center fixed;
@@ -7,12 +8,21 @@ body{
      -moz-background-size:cover;
       -o-background-size:cover;
       background-size:cover;
-      display: flex;
+      /* display: flex;
       justify-content: center;
       align-items: center;
-      height: 75vh;
-  }
+      height: 110vh; */
+  } 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
   
+li {
+  display: inline;
+}
 canvas {
   display: block;
 }  
