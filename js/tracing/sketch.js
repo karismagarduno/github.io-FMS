@@ -14,7 +14,7 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(900, 800);
+  createCanvas(700, 700);
   strokeWeight(5);
   stroke(0, 0, 0);
   //noFill();
@@ -94,7 +94,7 @@ function draw() {
   clear();
 
   // Draw dashed circle
-  drawDashedCircle(350, 350, circleRadius, 10);
+  drawDashedCircle(700, 400, circleRadius, 10);
 
   if (isTracing) {
     let distance = dist(mouseX, mouseY, 350, 350);
