@@ -21,7 +21,7 @@ function setup() {
 
   let startButton = createButton('Start');
   startButton.size(200, 50);
-  startButton.position(250, 520);
+  startButton.position(250, 300);
   startButton.style("font-size", "25px");
   startButton.style('background-color', '#CEDEBD');
   startButton.mouseOver(onHover1);
@@ -30,7 +30,7 @@ function setup() {
 
   let resetButton = createButton('Reset');
   resetButton.size(200, 50);
-  resetButton.position(250, 580);
+  resetButton.position(250, 360);
   resetButton.style("font-size", "25px");
   resetButton.style('background-color', '#CEDEBD');
   resetButton.mouseOver(onHover2);
@@ -39,7 +39,7 @@ function setup() {
   
   let nextButton = createButton('Next');
   nextButton.size(200, 50);
-  nextButton.position(250,640);
+  nextButton.position(250,420);
   nextButton.style("font-size", "25px");
   nextButton.style('background-color', '#CEDEBD');
   nextButton.mouseOver(onHover3);
