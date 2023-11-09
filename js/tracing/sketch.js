@@ -14,21 +14,68 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(900, 800);
+  createCanvas(700, 700);
   strokeWeight(5);
-  noFill();
+  stroke(0, 0, 0);
+  //noFill();
 
   let startButton = createButton('Start');
-  startButton.size(150, 30);
-  startButton.position(275, 530);
+  startButton.size(200, 50);
+  startButton.position(250, 520);
+  startButton.style("font-size", "25px");
+  startButton.style('background-color', '#CEDEBD');
+  startButton.mouseOver(onHover1);
+  startButton.mouseOut(onOut1);
   startButton.mousePressed(startTracing);
 
   let resetButton = createButton('Reset');
-  resetButton.position(300, 555);
+  resetButton.size(200, 50);
+  resetButton.position(250, 580);
+  resetButton.style("font-size", "25px");
+  resetButton.style('background-color', '#CEDEBD');
+  resetButton.mouseOver(onHover2);
+  resetButton.mouseOut(onOut2);
   resetButton.mousePressed(resetTracing);
   
   let nextButton = createButton('Next');
-  nextButton.position(300,580);
+  nextButton.size(200, 50);
+  nextButton.position(250,640);
+  nextButton.style("font-size", "25px");
+  nextButton.style('background-color', '#CEDEBD');
+  nextButton.mouseOver(onHover3);
+  nextButton.mouseOut(onOut3);
+  nextButton.mousePressed(goToAnotherPage);
+  
+  function onHover1() {
+  // Change the button's color when hovered over
+  startButton.style('background-color', '#9EB384');
+}
+
+function onOut1() {
+  // Change the button's color when the mouse leaves
+  startButton.style('background-color', '#CEDEBD');
+}
+  function onHover2() {
+  // Change the button's color when hovered over
+  resetButton.style('background-color', '#9EB384');
+}
+
+  function onOut2() {
+  // Change the button's color when the mouse leaves
+  resetButton.style('background-color', '#CEDEBD');
+}
+  function onHover3() {
+  // Change the button's color when hovered over
+  nextButton.style('background-color', '#9EB384');
+}
+
+function onOut3() {
+  // Change the button's color when the mouse leaves
+  nextButton.style('background-color', '#CEDEBD');
+}
+  function goToAnotherPage() {
+  window.location.href = 'tracing1.html'; //     Replace with the URL of the target page
+  }
 }
 
 function drawDashedCircle(x, y, radius, dashLength) {
@@ -62,17 +109,15 @@ function draw() {
       isDrawing = false;
       
       if (distance < circleRadius - 5) {
-        fill(20, 75, 200);
-        stroke(67, 83, 52);
-        strokeWeight(2);
-        textSize(20);
+        fill(250, 241, 228);
+        strokeWeight(5);
+        textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
         text('You are inside the circle', 350, 350); // Display inside the circle
       } else {
         fill(300, 50, 50);
-        stroke(139,0,0);
-        strokeWeight(2);
-        textSize(20);
+        strokeWeight(5);
+        textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
         text('You are outside the circle', 350, 350); // Display inside the circle
       }
@@ -90,8 +135,9 @@ function draw() {
       }
 
       if (completedTracing) {
-        textSize(20);
-        fill(0); // Set text color to black
+        textSize(25);
+        fill(67, 83, 52); // Set text color to green
+        strokeWeight(5);
         textAlign(CENTER, CENTER); // Center the text inside the circle
         text('Tracing Completed!', 350, 350); // Display inside the circle
       }
@@ -112,6 +158,7 @@ function startTracing() {
   path = [];
   isDrawing = false;
   tracedCoordinates = [];
+
 }
 
 function resetTracing() {
