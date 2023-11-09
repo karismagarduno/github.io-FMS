@@ -39,7 +39,7 @@ function setup() {
   
   let nextButton = createButton('Next');
   nextButton.size(200, 50);
-  nextButton.position(250,420);
+  nextButton.position(250,330);
   nextButton.style("font-size", "25px");
   nextButton.style('background-color', '#CEDEBD');
   nextButton.mouseOver(onHover3);
