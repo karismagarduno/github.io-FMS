@@ -14,20 +14,21 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(700, 700);
-  strokeWeight(2);
+  createCanvas(900, 800);
+  strokeWeight(5);
   noFill();
 
   let startButton = createButton('Start');
-  startButton.position(300, 530);
+  startButton.size(150, 30);
+  startButton.position(275, 530);
   startButton.mousePressed(startTracing);
 
   let resetButton = createButton('Reset');
-  resetButton.position(300, 550);
+  resetButton.position(300, 555);
   resetButton.mousePressed(resetTracing);
   
   let nextButton = createButton('Next');
-  nextButton.position(300,570);
+  nextButton.position(300,580);
 }
 
 function drawDashedCircle(x, y, radius, dashLength) {
@@ -52,21 +53,25 @@ function draw() {
     let distance = dist(mouseX, mouseY, 350, 350);
 
     if (distance >= circleRadius - 5 && distance <= circleRadius + 5) {
-      stroke(20, 75, 200);
-      strokeWeight(2);
+      //stroke(0, 0, 0);
+      strokeWeight(5);
       textSize(20);
 
       isDrawing = true;
     } else {
       isDrawing = false;
-
+      
       if (distance < circleRadius - 5) {
         fill(20, 75, 200);
+        stroke(67, 83, 52);
+        strokeWeight(2);
         textSize(20);
         textAlign(CENTER, CENTER); // Center the text inside the circle
         text('You are inside the circle', 350, 350); // Display inside the circle
       } else {
         fill(300, 50, 50);
+        stroke(139,0,0);
+        strokeWeight(2);
         textSize(20);
         textAlign(CENTER, CENTER); // Center the text inside the circle
         text('You are outside the circle', 350, 350); // Display inside the circle
