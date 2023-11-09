@@ -139,7 +139,7 @@ function draw() {
         fill(67, 83, 52); // Set text color to green
         strokeWeight(5);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('Tracing Completed!', 350, 350); // Display inside the circle
+        text('Tracing Completed!', 500, 400); // Display inside the circle
       }
 
       noFill();
