@@ -113,13 +113,13 @@ function draw() {
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are inside the circle', 450, 450); // Display inside the circle
+        text('You are inside the circle', 500, 400); // Display inside the circle
       } else {
         fill(300, 50, 50);
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are outside the circle', 450, 450); // Display inside the circle
+        text('You are outside the circle', 500, 400); // Display inside the circle
       }
     }
 
