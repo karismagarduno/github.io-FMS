@@ -14,14 +14,14 @@ const targetCoordinates = [
 const circleRadius = 150; // Radius of the circle
 
 function setup() {
-  createCanvas(700, 700);
+  createCanvas(1000, 700);
   strokeWeight(5);
   stroke(0, 0, 0);
   //noFill();
 
   let startButton = createButton('Start');
   startButton.size(200, 50);
-  startButton.position(250, 520);
+  startButton.position(250, 330);
   startButton.style("font-size", "25px");
   startButton.style('background-color', '#CEDEBD');
   startButton.mouseOver(onHover1);
@@ -30,7 +30,7 @@ function setup() {
 
   let resetButton = createButton('Reset');
   resetButton.size(200, 50);
-  resetButton.position(250, 580);
+  resetButton.position(950, 300);
   resetButton.style("font-size", "25px");
   resetButton.style('background-color', '#CEDEBD');
   resetButton.mouseOver(onHover2);
@@ -39,7 +39,7 @@ function setup() {
   
   let nextButton = createButton('Next');
   nextButton.size(200, 50);
-  nextButton.position(250,640);
+  nextButton.position(950,360);
   nextButton.style("font-size", "25px");
   nextButton.style('background-color', '#CEDEBD');
   nextButton.mouseOver(onHover3);
@@ -94,7 +94,7 @@ function draw() {
   clear();
 
   // Draw dashed circle
-  drawDashedCircle(350, 350, circleRadius, 10);
+  drawDashedCircle(700, 400, circleRadius, 10);
 
   if (isTracing) {
     let distance = dist(mouseX, mouseY, 350, 350);
@@ -113,13 +113,13 @@ function draw() {
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are inside the circle', 350, 350); // Display inside the circle
+        text('You are inside the circle', 700, 400); // Display inside the circle
       } else {
         fill(300, 50, 50);
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are outside the circle', 350, 350); // Display inside the circle
+        text('You are outside the circle', 700, 400); // Display inside the circle
       }
     }
 
@@ -139,7 +139,7 @@ function draw() {
         fill(67, 83, 52); // Set text color to green
         strokeWeight(5);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('Tracing Completed!', 350, 350); // Display inside the circle
+        text('Tracing Completed!', 700, 400); // Display inside the circle
       }
 
       noFill();
