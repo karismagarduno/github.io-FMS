@@ -113,13 +113,13 @@ function draw() {
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are inside the circle', 500, 400); // Display inside the circle
+        text('You are inside the circle', 700, 400); // Display inside the circle
       } else {
         fill(300, 50, 50);
         strokeWeight(5);
         textSize(25);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('You are outside the circle', 500, 400); // Display inside the circle
+        text('You are outside the circle', 700, 400); // Display inside the circle
       }
     }
 
@@ -139,7 +139,7 @@ function draw() {
         fill(67, 83, 52); // Set text color to green
         strokeWeight(5);
         textAlign(CENTER, CENTER); // Center the text inside the circle
-        text('Tracing Completed!', 500, 400); // Display inside the circle
+        text('Tracing Completed!', 700, 400); // Display inside the circle
       }
 
       noFill();
