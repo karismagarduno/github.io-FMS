@@ -30,26 +30,10 @@ const targetCoordinates = [
 
 function setup() {
   createCanvas(1000, 700);
-  let button = createButton('       TRACING: LEVEL 2');
-  button.style('font-size', '20px');
-  button.style('font-family', 'Expo');
-  button.position (370, 10);
   cursor(CROSS);
-  
-//   let startButton = createButton('Start');
-//   startButton.position(165, 315);
-//   startButton.style('font-size', '18px');
-//   startButton.style('font-family', 'Expo');
-//   startButton.mousePressed(startTracing);
 
-//   let resetButton = createButton('Reset');
-//   resetButton.position(163, 350);
-//   resetButton.style('font-size', '18px');
-//   resetButton.style('font-family', 'Expo');
-//   resetButton.mousePressed(resetTracing);
-  
-  let instructions = createButton('Trace the perimeter of this shape and try to beat your fastest time!');
-  instructions.position(312, 50);
+  let instructions = createButton('Try to beat your fastest time!');
+  instructions.position(675, 200);
   instructions.style('font-size', '11px');
   instructions.style('font-family', 'Expo');
   
@@ -57,6 +41,11 @@ function setup() {
   startHere.position(98, 273);
   startHere.style('font-size', '8px');
   startHere.style('font-family', 'Expo');
+
+  let homeButton = createButton('Back to Home');
+  homeButton.position(950, 360);
+  homeButton.style('font-size', '25px');
+  homeButton.style('font-family', 'Expo');
   
   o = createElement("h1");
   o.position(700,600);
@@ -84,9 +73,10 @@ function setup() {
     }
     }
   );
-  const resetButton = createButton(resetText);                         resetButton.position(950,300);
+  const resetButton = createButton(resetText);                         
+  resetButton.position(950,300);
   resetButton.style('font-family', 'Expo');
-  resetButton.style('font-size', '14px');
+  resetButton.style('font-size', '25px');
   resetButton.mouseClicked(() => {
     accumulateTime = true;
     start = null;
