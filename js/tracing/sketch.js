@@ -81,7 +81,7 @@ function onOut3() {
   nextButton.style('background-color', '#FFFFFF');
 }
 
-  function goToAnotherPage() {
+function goToAnotherPage() {
     window.location.href = 'tracing1.html'; // Replace with the URL of the target page
   }
 }
