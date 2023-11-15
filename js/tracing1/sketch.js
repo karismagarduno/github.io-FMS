@@ -33,8 +33,10 @@ function setup() {
   cursor(CROSS);
 
   let instructions = createButton('Try to beat your fastest time!');
-  instructions.position(675, 200);
-  instructions.style('font-size', '11px');
+  instructions.position(635, 200);
+  instructions.size(200, 50);
+  instructions.style('background-color', '#FFFFFF');
+  instructions.style('font-size', '19px');
   instructions.style('font-family', 'Expo');
   
   let startHere = createButton('^ Start Here... Move This Way >');
@@ -44,8 +46,11 @@ function setup() {
 
   let homeButton = createButton('Back to Home');
   homeButton.position(950, 360);
-  homeButton.style('font-size', '25px');
+  homeButton.size(200, 50);
+  homeButton.style('font-size', '25px'); 
   homeButton.style('font-family', 'Expo');
+  homeButton.mouseOver(onHover3);
+  homeButton.mouseOut(onOut3);
   
   o = createElement("h1");
   o.position(700,600);
@@ -54,8 +59,12 @@ function setup() {
   const resetText = "Reset";
   const startStop = createButton(startText);
   startStop.position(250, 330);
+  startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
   startStop.style('font-size', '25px');
+  startStop.style('background-color', '#FFFFFF');
+  startStop.mouseOver(onHover1);
+  startStop.mouseOut(onOut1);
   startStop.mouseClicked(() => {
     strokeWeight(2);
       textSize(22);
@@ -73,16 +82,47 @@ function setup() {
     }
     }
   );
-  const resetButton = createButton(resetText);                         
+  const resetButton = createButton(resetText);             
   resetButton.position(950,300);
+  resetButton.size(200, 50);
   resetButton.style('font-family', 'Expo');
   resetButton.style('font-size', '25px');
+  resetButton.mouseOver(onHover2);
+  resetButton.mouseOut(onOut2);
   resetButton.mouseClicked(() => {
     accumulateTime = true;
     start = null;
     startStop.html(startText);
     resetTracing();
   });
+  
+  function onHover1() {
+  // Change the button's color when hovered over
+  startStop.style('background-color', '#9EB384');
+}
+  
+  function onOut1() {
+  // Change the button's color when the mouse leaves
+  startStop.style('background-color', '#FFFFFF');
+}
+  function onHover2() {
+  // Change the button's color when hovered over
+  resetButton.style('background-color', '#9EB384');
+}
+
+  function onOut2() {
+  // Change the button's color when the mouse leaves
+  resetButton.style('background-color', '#FFFFFF');
+}
+  function onHover3() {
+  // Change the button's color when hovered over
+  homeButton.style('background-color', '#9EB384');
+}
+
+function onOut3() {
+  // Change the button's color when the mouse leaves
+  homeButton.style('background-color', '#FFFFFF');
+}
 
 }
 
