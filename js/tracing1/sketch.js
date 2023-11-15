@@ -97,7 +97,7 @@ function setup() {
 }
 
 function draw() {
-  background('#ffff');
+  clear();
   
   if (accumulateTime)
 {  
