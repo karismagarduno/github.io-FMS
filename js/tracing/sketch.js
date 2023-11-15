@@ -23,7 +23,7 @@ function setup() {
   startButton.size(200, 50);
   startButton.position(250, 330);
   startButton.style("font-size", "25px");
-  startButton.style('background-color', '#CEDEBD');
+  startButton.style('background-color', '#FFFFFF');
   startButton.mouseOver(onHover1);
   startButton.mouseOut(onOut1);
   startButton.mousePressed(startTracing);
@@ -32,7 +32,7 @@ function setup() {
   resetButton.size(200, 50);
   resetButton.position(950, 300);
   resetButton.style("font-size", "25px");
-  resetButton.style('background-color', '#CEDEBD');
+  resetButton.style('background-color', '#FFFFFF');
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mousePressed(resetTracing);
@@ -41,7 +41,7 @@ function setup() {
   nextButton.size(200, 50);
   nextButton.position(950,360);
   nextButton.style("font-size", "25px");
-  nextButton.style('background-color', '#CEDEBD');
+  nextButton.style('background-color', '#FFFFFF');
   nextButton.mouseOver(onHover3);
   nextButton.mouseOut(onOut3);
   nextButton.mousePressed(goToAnotherPage);
@@ -53,7 +53,7 @@ function setup() {
 
 function onOut1() {
   // Change the button's color when the mouse leaves
-  startButton.style('background-color', '#CEDEBD');
+  startButton.style('background-color', '#FFFFFF');
 }
   function onHover2() {
   // Change the button's color when hovered over
@@ -62,7 +62,7 @@ function onOut1() {
 
   function onOut2() {
   // Change the button's color when the mouse leaves
-  resetButton.style('background-color', '#CEDEBD');
+  resetButton.style('background-color', '#FFFFFF');
 }
   function onHover3() {
   // Change the button's color when hovered over
@@ -71,7 +71,7 @@ function onOut1() {
 
 function onOut3() {
   // Change the button's color when the mouse leaves
-  nextButton.style('background-color', '#CEDEBD');
+  nextButton.style('background-color', '#FFFFFF');
 }
   function goToAnotherPage() {
   window.location.href = 'tracing1.html'; //     Replace with the URL of the target page
