@@ -33,7 +33,7 @@ function setup() {
   cursor(CROSS);
 
   let instructions = createButton('Try to beat your fastest time!');
-  instructions.position(635, 200);
+  instructions.position(635, 210);
   instructions.size(200, 50);
   instructions.style('background-color', '#FFFFFF');
   instructions.style('font-size', '19px');
