@@ -1,15 +1,69 @@
-body{
-    background-color: #FAF1E4;
-}
-h1{
-    font-size: 300;
-    text-align: center;
-}
-p1{
-    font-size: 250;
-    text-align: center;
-}
-img{
-    height: 500px;
-    width: 200px;
-}
+body {
+    margin: 0px;
+    background: #9EB384;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+    left: 50px;
+  }
+  .btn{
+    padding: 20px 32px;
+    font-size: 28px;
+    margin: 10px;
+    background: none;
+    color: #CEDEBD;
+    border: 1px solid #000000;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    top: 450px;
+    left: 290px;
+  }
+  .start, .btn:hover{
+    background-color: #435334;
+    color: #CEDEBD;
+    box-shadow: 0 0 26px 1px green;
+    border: 1px solid green;
+  }
+  h1{
+    position: fixed;
+    top: 0;
+    font-size: 50px;
+    display: inline-block;
+    border: 1px solid black;
+    border-width: 2px solid #CEDEBD;
+    background: #CEDEBD;
+  
+  }
+   .dashed-arrow {
+              position: relative;
+              left: 1px;
+     bottom: -200px;
+         
+              width: 3;
+              height: 250px; /* Adjust the height as needed */
+              border-left: 10px dashed black; /* Adjust the border properties as needed */
+              margin: 0 auto;
+          }
+  
+          /* Create the arrowhead */
+          .dashed-arrow::before {
+              content: "";
+              position: absolute;
+             top: -90px;
+              left: -35px;
+              border-width: 60px 30px;
+              border-style: solid;
+              border-color: transparent transparent black transparent;
+          }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+            
+    li {
+        display: inline;
+    }
