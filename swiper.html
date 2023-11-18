@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMS</title>
-    <link rel="stylesheet" href="css/swiper.css">
-    <script src="script.js"></script>
+    <title>Swiper</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+    <script src="js/tracing/libraries/p5.min.js"></script>
+    <script src="js/tracing/libraries/p5.sound.min.js"></script>
 </head>
-
-<body>
-    <nav>
-        <ul> 
-            <li><a href = "index.html">Home</a></li>
-            
+<body onload="showAlert()">
+    <script src="js/swiper/sketch.js"></script>
+    <div>
+        <ul class="homebutton">
+            <li><a href="index.html"><img src= "images/home.png" width ="50" height="50"></a></li>
+            <li><a href= "activites.html"><img src= "images/flower .png" width ="50" height="50"></a></li>
         </ul>
-     </nav>
-<h1>Swiper</h1>
-<p1>
-    Level1<img src= "images/arrow tracing.png"><br> 
-    Level2<br>
-    Level3
-</p1>
-
-
+    </div>
+    <h1>Swiper</h1>
+    <div id = "mydiv">
+       <button class = "btn start" id = "Start">Start</button>
+        <button class = "btn" id = "Reset">Reset</button>
+       <button class = "btn" id = "Next" disabled> Level 2</button>
+     </div>
+    <div id="timerDisplay" style = "font-size: 20px;">Time remaining: <span id="timerValue"></span></div>
+    <main>
+    </main>
 </body>
-
 </html>
