@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../images/applecard.png",
+        "name": "apple"
+    },
+    {
+        "image": "../images/orangecard.png",
+        "name": "orange"
+    },
+    {
+        "image": "../images/grape.png",
+        "name": "grape"
+    },
+    {
+        "image": "../images/watermeloncard.png",
+        "name": "watermelon"
+    },
+    {
+        "image": "../images/strawberrycards.png",
+        "name": "strawberry"
+    },
+    {
+        "image": "../images/bananacard.png",
+        "name": "banana"
+    }
+]

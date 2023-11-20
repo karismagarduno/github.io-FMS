@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/memory.css">
-    <script src="js/memory.js"></script>
+    <script src="js/memory/memory.js"></script>
 </head>
 
 <body>
@@ -22,44 +22,11 @@
     <h1>
         <img src = "images/picturecards.png" width="600" height="150">
      </h1>
-    <div class = "grid-container">
-        <div class = "card" id="apple">
-            <div class ="front">
-                <img class = "front-image" src = "images/applecard.png">
-            </div>
-            <div class = "back"></div>
-        </div>
-        <div class = "card" id="orange">
-            <div class ="front">
-                <img class = "front-image" src = "images/orangecard.png">
-            </div>
-            <div class = "back"></div>
-        </div>
-        <div class = "card" id="grape">
-            <div class ="front">
-                <img class = "front-image" src = "images/grape.png">
-            </div>
-            <div class = "back"></div>
-        </div>
-        <div class = "card" id="watermelon">
-            <div class ="front">
-                <img class = "front-image" src = "images/watermeloncard.png">
-            </div>
-            <div class = "back"></div>
-        </div>
-        <div class = "card" id="strawberry">
-            <div class ="front">
-                <img class = "front-image" src = "images/strawberrycards.png">
-            </div>
-            <div class = "back"></div>
-        </div>
-        <div class = "card" id="banana">
-            <div class ="front">
-                <img class = "front-image" src = "images/bananacard.png">
-            </div>
-            <div class = "back"></div>
-        </div>
+     <div class="grid-container">
     </div>
-
+    <p>Score: <span class="score"></span></p>
+    <div class="actions">
+        <button onclick="restart()">Restart</button>
+    </div>
 </body>
 </html> 
