@@ -26,24 +26,23 @@ const targetCoordinates = [
   { x: 105, y: 270},
 ];
 
-
-
 function setup() {
   createCanvas(1000, 700);
+  clear();
   cursor(CROSS);
-
-  let instructions = createButton('Try to beat your fastest time!');
-  instructions.position(635, 200);
-  instructions.size(200, 50);
-  instructions.style('background-color', '#FFFFFF');
-  instructions.style('font-size', '19px');
-  instructions.style('font-family', 'Expo');
+  
+  // let instructions = createButton('Try to beat your fastest time!');
+  // instructions.position(635, 210);
+  // instructions.size(200, 50);
+  // instructions.style('background-color', '#FFFFFF');
+  // instructions.style('font-size', '19px');
+  // instructions.style('font-family', 'Expo');
   
   let startHere = createButton('^ Start Here... Move This Way >');
-  startHere.position(98, 273);
-  startHere.style('font-size', '8px');
+  startHere.position(550, 560);
+  startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
-
+  
   let homeButton = createButton('Back to Home');
   homeButton.position(950, 360);
   homeButton.size(200, 50);
@@ -53,12 +52,12 @@ function setup() {
   homeButton.mouseOut(onOut3);
   
   o = createElement("h1");
-  o.position(700,600);
+  o.position(660,600);
   const startText = "Start";
   const stopText = "Stop";
   const resetText = "Reset";
   const startStop = createButton(startText);
-  startStop.position(250, 330);
+  startStop.position(250, 360);
   startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
   startStop.style('font-size', '25px');
@@ -127,8 +126,6 @@ function onOut3() {
 }
 
 function draw() {
-  clear();
-  
   if (accumulateTime)
 {  
   const totalMillis = accum + (start != null ? Date.now() - start : 0);
@@ -152,37 +149,49 @@ function draw() {
   
   stroke(0);
   strokeWeight(2);
-  line(100,180,150,120);//left slant
-  line(250,120,295,180);//right slant
-  line(150,120,250,120);//top line
-  line(100,180,100,270);//left verticle
-  line(100,270,295,270);//bottom line
-  line(295,180,295,270);//right verticle
+  line(550,400,625,250);//left slant (CHANGED)
+  line(786,250,855,400);//right slant (CHANGED)
+  line(625,250,786,250);//top line (CHANGED)
+  line(550,400,550,550);//left verticle (CHANGED)
+  line(550,550,855,550);//bottom line (CHANGED)
+  line(855,400,855,550);//right verticle (CHANGED)
   
-  point(100,180); 
-  point(110,168);
-  point(120,156);    //points for the left slant
-  point(130,144);
-  point(140,132);
-  point(150,120);
+  point(550,400); 
+  point(557.5,385);
+  point(565,370);    
+  point(572.5,355);
+  point(580,340);
+  point(587.5,325); // left slant points
+  point(595,310);
+  point(602.5,295);
+  point(610,280);
+  point(617.5,265);
+  point(625.250);
   
-  point(250,120);
-  point(265,139.95);  //points for the right slant
-  point(280,159.9);
-  point(295,180);
+  point(786,250);
+  point(792.9,265);  
+  point(799.8,280);
+  point(806.7,295);
+  point(813.6,310);
+  point(820.5,325); // right slant points
+  point(827.4,340);
+  point(834.4,355);
+  point(841.2,370);
+  point(848.1,385);
+  point(855,400);
   
     if (isMouseOnLine)
     {
       strokeWeight(2);
-      textSize(22);
+      textSize(26);
       textFont('Expo');
-      text('Keep it up!!!', 145, 205);
+      text('Keep it up!!!', 640, 410);
       isDrawing = true;
     } else {
       strokeWeight(2);
-      textSize(22);
+      textSize(26);
       textFont('Expo');
-      text('Don\'t give up!!!', 130, 205);
+      text('Don\'t give up!!!', 630, 410);
       isDrawing = false;
     }
 
@@ -206,10 +215,7 @@ function draw() {
      stroke('rgba(10,120,70, 0.5)');
      if (completedTracing) {
         textSize(18);
-        text('Tracing Completed!', 123, 97); // Display outside
-        let nextButton = createButton('Next');
-        nextButton.position(295,335);
-        nextButton.style('font-size', '17px');  
+        text('Tracing Completed!', 615, 200); // Display outside
         accumulateTime = false;
        
       resetTracing();
@@ -254,3 +260,9 @@ function hasTracedCoordinate(targetCoord) {
   }
   return false;
 }
+
+// function showAlert()
+// {
+//   alert("Once you click start, you will have 10 seconds to get as many swipes!");
+// }
+
