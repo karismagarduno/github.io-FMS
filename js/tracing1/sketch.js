@@ -44,7 +44,7 @@ function setup() {
   startHere.style('font-family', 'Expo');
   
   let homeButton = createButton('Back to Home');
-  homeButton.position(950, 360);
+  homeButton.position(950, 410);
   homeButton.size(200, 50);
   homeButton.style('font-size', '25px'); 
   homeButton.style('font-family', 'Expo');
@@ -57,7 +57,7 @@ function setup() {
   const stopText = "Stop";
   const resetText = "Reset";
   const startStop = createButton(startText);
-  startStop.position(250, 360);
+  startStop.position(250, 410);
   startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
   startStop.style('font-size', '25px');
@@ -79,7 +79,7 @@ function setup() {
     }
   );
   const resetButton = createButton(resetText);             
-  resetButton.position(950,300);
+  resetButton.position(950,350);
   resetButton.size(200, 50);
   resetButton.style('font-family', 'Expo');
   resetButton.style('font-size', '25px');
