@@ -1,5 +1,6 @@
 body{
     background-color: #FAF1E4;
+    font-family: 'Merriweather', serif;
 }
 h1{
     display: block;
@@ -9,11 +10,12 @@ h1{
 }
 button{
     background-color: white;
-    font-size: 25px;
+    font-size: 24px;
     border-radius: 8px;
     border-color: #435334;
     height: 50px;
     width: 200px;
+    font-family: 'Merriweather', serif;
 }
 button:hover {
     background-color:#9EB384;

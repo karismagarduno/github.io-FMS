@@ -24,6 +24,7 @@ function setup() {
   strokeWeight(5);
   stroke(0, 0, 0);
   cursor(CROSS);
+  textFont('Merriweather'); 
 
 
   // Initialize targetCoordinates using cos and sin within setup

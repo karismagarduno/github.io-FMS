@@ -1,5 +1,6 @@
 body{
     background-color: #FAF1E4;
+    font-family: 'Merriweather', serif;
 }
 h1{
     display: block;
@@ -19,8 +20,8 @@ ul {
   
   p {
       text-align: center;
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 25px;
+      font-family: 'Merriweather', serif;
   }
   
   .actions {
@@ -29,11 +30,18 @@ ul {
   }
   
   .actions button {
-      padding: 8px 16px;
-      font-size: 30px;
-      border-radius: 10px;
-      background-color: #27ae60;
-      color: white;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 8px;
+    border-color: #435334;
+    height: 50px;
+    width: 200px;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .actions button:hover {
+    background-color:#9EB384;
+    transition: 0.7s;
   }
   
   .grid-container {
