@@ -159,29 +159,29 @@ function draw() {
  // line(855,400,855,550);//right verticle (CHANGED)
   line(855,310,855,460);
   
-  point(550,400); 
-  point(557.5,385);
-  point(565,370);    
-  point(572.5,355);
-  point(580,340);
-  point(587.5,325); // left slant points
-  point(595,310);
-  point(602.5,295);
-  point(610,280);
-  point(617.5,265);
-  point(625.250);
+  point(550,310); 
+  point(557.5,295);
+  point(565,280);    
+  point(572.5,265);
+  point(580,250);
+  point(587.5,235); // left slant points
+  point(595,220);
+  point(602.5,205);
+  point(610,190);
+  point(617.5,175);
+  point(625,160);
   
-  point(786,250);
-  point(792.9,265);  
-  point(799.8,280);
-  point(806.7,295);
-  point(813.6,310);
-  point(820.5,325); // right slant points
-  point(827.4,340);
-  point(834.4,355);
-  point(841.2,370);
-  point(848.1,385);
-  point(855,400);
+  point(786,160);
+  point(792.9,175);  
+  point(799.8,190);
+  point(806.7,205);
+  point(813.6,220);
+  point(820.5,235); // right slant points
+  point(827.4,250);
+  point(834.4,265);
+  point(841.2,280);
+  point(848.1,295);
+  point(855,310);
   
     if (isMouseOnLine)
     {
