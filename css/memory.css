@@ -56,7 +56,9 @@ ul {
     height: calc(140px / 2 * 3);
     width: 140px;
     border-radius: 10px;
-    background-color: white;
+    background-image: url("images/bgcard.png");
+    background-position: center center;
+    background-size: cover;
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
