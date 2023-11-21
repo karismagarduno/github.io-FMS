@@ -1,26 +1,26 @@
 [
     {
-        "image": "../images/applecard.png",
+        "image": "./images/applecard.png",
         "name": "apple"
     },
     {
-        "image": "../images/orangecard.png",
+        "image": "./images/orangecard.png",
         "name": "orange"
     },
     {
-        "image": "../images/grape.png",
+        "image": "./images/grape.png",
         "name": "grape"
     },
     {
-        "image": "../images/watermeloncard.png",
+        "image": "./images/watermeloncard.png",
         "name": "watermelon"
     },
     {
-        "image": "../images/strawberrycards.png",
+        "image": "./images/strawberrycards.png",
         "name": "strawberry"
     },
     {
-        "image": "../images/bananacard.png",
+        "image": "./images/bananacard.png",
         "name": "banana"
     }
 ]
