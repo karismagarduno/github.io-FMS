@@ -99,5 +99,5 @@ function restart() {
 }
 function showAlert()
 {
-  alert("Your goal is to achieve the lowest score possible by matching the correct cards, then use the restart feature to beat your previous performance!");
+  alert("Your goal is to achieve the lowest moves possible by matching the correct cards, you will know the game is over when all the cards are faced up. Use the restart feature to beat your previous performance!");
 }
