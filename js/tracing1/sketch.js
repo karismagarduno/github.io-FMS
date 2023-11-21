@@ -147,8 +147,8 @@ function draw() {
   o.style('font-size', '20px')
 }
   
-  if(((mouseX>=95 && mouseX<=300) && (mouseY>=265 && mouseY<=275)) || ((mouseX>=95 && mouseX<=105) && (mouseY>=175 && mouseY<=275)) || ((mouseX>=290 && mouseX<=300) && (mouseY>=175 && mouseY<=275)) || ((mouseX>=145 && mouseX<=255) && (mouseY>=115 && mouseY<=125)) || ((mouseX>=100 && mouseX<=110) && (mouseY<=180 && mouseY>=168)) || ((mouseX>=110 && mouseX<=120) && (mouseY<=168 && mouseY>=156)) || ((mouseX>=120 && mouseX<=130) && (mouseY<=156 && mouseY>=144)) || ((mouseX>=130 && mouseX<=140) && (mouseY<=144 && mouseY>=132)) || ((mouseX>=140 && mouseX<=150) && (mouseY<=132 && mouseY>=120)) ||
-((mouseX>=250 && mouseX<=265) && (mouseY>=120 && mouseY<=139.95)) || ((mouseX>=265 && mouseX<=280) && (mouseY>=139.95 && mouseY<=159.9)) || ((mouseX>=280 && mouseX<=295) && (mouseY>=159.9 && mouseY<=180)))
+  if(((mouseX>=545 && mouseX<=900) && (mouseY>=455 && mouseY<=465)) || ((mouseX>=545 && mouseX<=555) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=850 && mouseX<=860) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=620 && mouseX<=791) && (mouseY>=155 && mouseY<=165)) || ((mouseX>=557.5 && mouseX<=565) && (mouseY<=295 && mouseY>=280)) || ((mouseX>=565 && mouseX<=572.5) && (mouseY<=280 && mouseY>=265)) || ((mouseX>=572.5 && mouseX<=580) && (mouseY<=265 && mouseY>=250)) || ((mouseX>=580 && mouseX<=587.5) && (mouseY<=250 && mouseY>=235)) || ((mouseX>=587.5 && mouseX<=595) && (mouseY<=235 && mouseY>=220)) ||
+((mouseX>=595 && mouseX<=602.5) && (mouseY>=220 && mouseY<=205)) || ((mouseX>=602.5 && mouseX<=610) && (mouseY>=205 && mouseY<=190)) || ((mouseX>=610 && mouseX<=617.5) && (mouseY>=190 && mouseY<=175))|| ((mouseX>=617.5 && mouseX<=625) && (mouseY>=175 && mouseY<=160))|| ((mouseX>=792.9 && mouseX<=799.8) && (mouseY>=175 && mouseY<=190))|| ((mouseX>=799.8 && mouseX<=806.7) && (mouseY>=190 && mouseY<=205))|| ((mouseX>=806.7 && mouseX<=813.6) && (mouseY>=205 && mouseY<=220))|| ((mouseX>=813.6 && mouseX<=820.5) && (mouseY>=220 && mouseY<=235))|| ((mouseX>=820.5 && mouseX<=827.4) && (mouseY>=235 && mouseY<=250))|| ((mouseX>=827.4 && mouseX<=834.3) && (mouseY>=250 && mouseY<=265))|| ((mouseX>=834.3 && mouseX<=841.2) && (mouseY>=265 && mouseY<=280))|| ((mouseX>=841.2 && mouseX<=848.1) && (mouseY>=280 && mouseY<=295))|| ((mouseX>=848.1 && mouseX<=855) && (mouseY>=295 && mouseY<=310)))
     {
       isMouseOnLine = true;
     }
@@ -158,18 +158,12 @@ function draw() {
   
   stroke(0);
   strokeWeight(2);
- // line(550,400,625,250);//left slant (CHANGED)
-  line(550,310,625,160);
- // line(786,250,855,400);//right slant (CHANGED)
-  line(786,160,855,310);
- // line(625,250,786,250);//top line (CHANGED)
-  line(625,160,786,160);
- // line(550,400,550,550);//left verticle (CHANGED)
-  line(550,310,550,460);
- // line(550,550,855,550);//bottom line (CHANGED)
-  line(550,460,855,460);
- // line(855,400,855,550);//right verticle (CHANGED)
-  line(855,310,855,460);
+  line(550,310,625,160); //left slant final
+  line(786,160,855,310); //right slant final
+  line(625,160,786,160); //top line final
+  line(550,310,550,460); // left verticle final
+  line(550,460,855,460); //bottom line final
+  line(855,310,855,460); //right verticle final
   
   point(550,310); 
   point(557.5,295);
@@ -250,8 +244,6 @@ function draw() {
 
 function startTracing() {
   isTracing = true;
- // textSize(18);
- // text('Start tracing!', 50, 300);
   path = [];
   isDrawing = false;
   tracedCoordinates = [];
