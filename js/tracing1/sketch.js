@@ -218,7 +218,7 @@ function draw() {
 
      // completedTracing = true;
       for (let targetCoord of targetCoordinates) {
-        if (!hasTracedCoordinate(targetCoord)) {
+        if (!hasTracedCoordinate(targetCoordinates)) {
           completedTracing = false;
           break;
         } else completedTracing = true;
