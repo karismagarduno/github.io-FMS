@@ -40,7 +40,7 @@ function setup() {
   instructions.style('font-family', 'Expo');
   
   let startHere = createButton('^ Start Here... Move This Way >');
-  startHere.position(98, 273);
+  startHere.position(98, 323);
   startHere.style('font-size', '8px');
   startHere.style('font-family', 'Expo');
 
@@ -53,7 +53,7 @@ function setup() {
   homeButton.mouseOut(onOut3);
   
   o = createElement("h1");
-  o.position(700,600);
+  o.position(700,650);
   const startText = "Start";
   const stopText = "Stop";
   const resetText = "Reset";
@@ -132,10 +132,8 @@ function draw() {
   if (accumulateTime)
 {  
   const totalMillis = accum + (start != null ? Date.now() - start : 0);
-  //const ms = Math.floor(totalMillis % 1000 / 10);
   const s = Math.floor(totalMillis / 1000) % 60;
   const m = Math.floor(totalMillis / 1000 / 60) % 60;
-  //const h = Math.floor(totalMillis / 1000 / 60 / 60);
   const string = `Time: ${nf(m, 2)}:${nf(s, 2)}`;
   o.html(string);
   o.style('font-size', '20px')
