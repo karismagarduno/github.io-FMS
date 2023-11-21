@@ -97,3 +97,7 @@ function restart() {
   gridContainer.innerHTML = "";
   generateCards();
 }
+function showAlert()
+{
+  alert("Your goal is to achieve the lowest score possible by matching the correct cards, then use the restart feature to beat your previous performance!");
+}
