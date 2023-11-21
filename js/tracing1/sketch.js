@@ -188,13 +188,13 @@ function draw() {
       strokeWeight(2);
       textSize(26);
       textFont('Expo');
-      text('Keep it up!!!', 640, 410);
+      text('Keep it up!!!', 640, 320);
       isDrawing = true;
     } else {
       strokeWeight(2);
       textSize(26);
       textFont('Expo');
-      text('Don\'t give up!!!', 630, 410);
+      text('Don\'t give up!!!', 630, 320);
       isDrawing = false;
     }
 
