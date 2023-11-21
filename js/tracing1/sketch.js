@@ -50,12 +50,12 @@ function setup() {
   // instructions.style('font-size', '19px');
   // instructions.style('font-family', 'Expo');
   
-  let startHere = createButton('^ Start Here... Move This Way >');
+  let startHere = createButton('^ Start Here... Move This Way >'); // starting point for the player (doesn't activate anything)
   startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
   
-  let homeButton = createButton('Back to Home');
+  let homeButton = createButton('Back to Home'); // takes the player back to the home page
   homeButton.position(950, 410);
   homeButton.size(200, 50);
   homeButton.style('font-size', '25px'); 
@@ -63,12 +63,12 @@ function setup() {
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
   
-  o = createElement("h1");
+  o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
   const startText = "Start";
   const stopText = "Stop";
   const resetText = "Reset";
-  const startStop = createButton(startText);
+  const startStop = createButton(startText); // start and stop button 
   startStop.position(250, 410);
   startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
@@ -90,7 +90,7 @@ function setup() {
     }
     }
   );
-  const resetButton = createButton(resetText);             
+  const resetButton = createButton(resetText); // reset button to set the timer to zero and reset the tracing             
   resetButton.position(950,350);
   resetButton.size(200, 50);
   resetButton.style('font-family', 'Expo');
@@ -104,7 +104,7 @@ function setup() {
     resetTracing();
   });
   
-  function onHover1() {
+  function onHover1() { 
   // Change the button's color when hovered over
   startStop.style('background-color', '#9EB384');
 }
@@ -135,18 +135,18 @@ function onOut3() {
 }
 
 function draw() {
-  if (accumulateTime)
+  // code that programs the timer
+  if (accumulateTime) 
 {  
   const totalMillis = accum + (start != null ? Date.now() - start : 0);
-  //const ms = Math.floor(totalMillis % 1000 / 10);
   const s = Math.floor(totalMillis / 1000) % 60;
   const m = Math.floor(totalMillis / 1000 / 60) % 60;
-  //const h = Math.floor(totalMillis / 1000 / 60 / 60);
   const string = `Time: ${nf(m, 2)}:${nf(s, 2)}`;
   o.html(string);
   o.style('font-size', '20px')
 }
-  
+
+  // check to see if the user is hovering over the lines drawn
   if(((mouseX>=545 && mouseX<=900) && (mouseY>=455 && mouseY<=465)) || ((mouseX>=545 && mouseX<=555) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=850 && mouseX<=860) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=620 && mouseX<=791) && (mouseY>=155 && mouseY<=165)) || ((mouseX>=557.5 && mouseX<=565) && (mouseY<=295 && mouseY>=280)) || ((mouseX>=565 && mouseX<=572.5) && (mouseY<=280 && mouseY>=265)) || ((mouseX>=572.5 && mouseX<=580) && (mouseY<=265 && mouseY>=250)) || ((mouseX>=580 && mouseX<=587.5) && (mouseY<=250 && mouseY>=235)) || ((mouseX>=587.5 && mouseX<=595) && (mouseY<=235 && mouseY>=220)) ||
 ((mouseX>=595 && mouseX<=602.5) && (mouseY>=220 && mouseY<=205)) || ((mouseX>=602.5 && mouseX<=610) && (mouseY>=205 && mouseY<=190)) || ((mouseX>=610 && mouseX<=617.5) && (mouseY>=190 && mouseY<=175))|| ((mouseX>=617.5 && mouseX<=625) && (mouseY>=175 && mouseY<=160))|| ((mouseX>=792.9 && mouseX<=799.8) && (mouseY>=175 && mouseY<=190))|| ((mouseX>=799.8 && mouseX<=806.7) && (mouseY>=190 && mouseY<=205))|| ((mouseX>=806.7 && mouseX<=813.6) && (mouseY>=205 && mouseY<=220))|| ((mouseX>=813.6 && mouseX<=820.5) && (mouseY>=220 && mouseY<=235))|| ((mouseX>=820.5 && mouseX<=827.4) && (mouseY>=235 && mouseY<=250))|| ((mouseX>=827.4 && mouseX<=834.3) && (mouseY>=250 && mouseY<=265))|| ((mouseX>=834.3 && mouseX<=841.2) && (mouseY>=265 && mouseY<=280))|| ((mouseX>=841.2 && mouseX<=848.1) && (mouseY>=280 && mouseY<=295))|| ((mouseX>=848.1 && mouseX<=855) && (mouseY>=295 && mouseY<=310)))
     {
@@ -189,6 +189,7 @@ function draw() {
   point(848.1,295);
   point(855,310);
   
+  // gives encouragement  
     if (isMouseOnLine)
     {
       strokeWeight(2);
@@ -206,6 +207,7 @@ function draw() {
 
   let completedTracing = false;
   
+  // creates a moving line behind the user's mouse if they are hovering over the perimeter
     if (isDrawing) 
     {
      stroke('rgba(10,120,70, 0.5)');
