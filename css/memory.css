@@ -56,7 +56,7 @@ ul {
     height: calc(140px / 2 * 3);
     width: 140px;
     border-radius: 10px;
-    background-image: url("images/bgcard.png");
+    background-image: url("../images/bgcard.png");
     background-position: center center;
     background-size: cover;
     position: relative;
