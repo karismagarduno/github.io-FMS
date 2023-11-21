@@ -228,8 +228,8 @@ function draw() {
   
      stroke('rgba(10,120,70, 0.5)');
      if (completedTracing) {
-        textSize(18);
-        text('Tracing Completed!', 615, 200); // Display outside
+        textSize(22);
+        text('Tracing Completed!', 640, 160); // Display outside
         accumulateTime = false;
         resetTracing();
       }
