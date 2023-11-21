@@ -39,7 +39,7 @@ function setup() {
   // instructions.style('font-family', 'Expo');
   
   let startHere = createButton('^ Start Here... Move This Way >');
-  startHere.position(550, 560);
+  startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
   
@@ -52,7 +52,7 @@ function setup() {
   homeButton.mouseOut(onOut3);
   
   o = createElement("h1");
-  o.position(660,600);
+  o.position(660,650);
   const startText = "Start";
   const stopText = "Stop";
   const resetText = "Reset";
