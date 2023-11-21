@@ -229,7 +229,7 @@ function draw() {
      stroke('rgba(10,120,70, 0.5)');
      if (completedTracing) {
         textSize(22);
-        text('Tracing Completed!', 640, 160); // Display outside
+        text('Tracing Completed!', 620, 110); // Display outside
         accumulateTime = false;
         resetTracing();
       }
