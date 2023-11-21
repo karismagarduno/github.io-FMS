@@ -2,7 +2,7 @@ let isTracing = false; // Flag to track if the user is tracing
 let traceColor = 50; // Color of the (290, 150) coordinate
 let traceText = ''; // Text to display when tracing
 let path = []; // An array to store the mouse movement path
-let isDrawing = false; // Flag to track if the user is drawing
+//let isDrawing = false; // Flag to track if the user is drawing
 let tracedCoordinates = []; // Array to store traced coordinates
 let accum = 0; // for timer
 let start = null; //for timer 
@@ -196,30 +196,33 @@ function draw() {
       textSize(26);
       textFont('Expo');
       text('Keep it up!!!', 640, 320);
-      isDrawing = true;
+      //isDrawing = true;
+      isTracing = true;
     } else {
       strokeWeight(2);
       textSize(26);
       textFont('Expo');
       text('Don\'t give up!!!', 630, 320);
-      isDrawing = false;
+      //isDrawing = false;
+      isTracing = false;
     }
 
   let completedTracing = false;
   
   // creates a moving line behind the user's mouse if they are hovering over the perimeter
-    if (isDrawing) 
+    if (isTracing) 
     {
      stroke('rgba(10,120,70, 0.5)');
       path.push(createVector(mouseX, mouseY));
       line(pmouseX, pmouseY, mouseX, mouseY);
 
-      completedTracing = true;
+     // completedTracing = true;
       for (let targetCoord of targetCoordinates) {
         if (!hasTracedCoordinate(targetCoord)) {
           completedTracing = false;
           break;
-        }
+        } else completedTracing = true;
+        break;
       }
     }
   
@@ -228,8 +231,7 @@ function draw() {
         textSize(18);
         text('Tracing Completed!', 615, 200); // Display outside
         accumulateTime = false;
-       
-      resetTracing();
+        resetTracing();
       }
   
       strokeWeight(3);
@@ -240,14 +242,13 @@ function draw() {
           vertex(point.x, point.y);
         }
       endShape();
-
-  
 }
 
 function startTracing() {
-  isTracing = true;
+//  isTracing = true;
+  isTracing = false;
   path = [];
-  isDrawing = false;
+ // isDrawing = false;
   tracedCoordinates = [];
 }
 
@@ -255,7 +256,7 @@ function resetTracing() {
   isTracing = false;
   textSize(18);
   text(' ', 50, 300);
-  isDrawing = false;
+//  isDrawing = false;
   tracedCoordinates = [];
 }
 
