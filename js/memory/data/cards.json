@@ -1,14 +1,14 @@
 [
     {
-        "image": "./images/applecard.png",
+        "image": "images/applecard.png",
         "name": "apple"
     },
     {
-        "image": "./images/orangecard.png",
+        "image": "images/orangecard.png",
         "name": "orange"
     },
     {
-        "image": "./images/grape.png",
+        "image": "images/grape.png",
         "name": "grape"
     },
     {
