@@ -66,9 +66,9 @@ function setup() {
   startStop.mouseOut(onOut1);
   startStop.mouseClicked(() => {
     strokeWeight(2);
-      textSize(22);
-      textFont('Expo');
-      text('Begin!', 145, 205);
+     // textSize(22);
+     // textFont('Expo');
+     // text('Begin!', 145, 205);
     if (start == null) {
       start = Date.now();
       startStop.html(stopText);
@@ -235,8 +235,8 @@ function draw() {
 
 function startTracing() {
   isTracing = true;
-  textSize(18);
-  text('Start tracing!', 50, 300);
+ // textSize(18);
+ // text('Start tracing!', 50, 300);
   path = [];
   isDrawing = false;
   tracedCoordinates = [];
