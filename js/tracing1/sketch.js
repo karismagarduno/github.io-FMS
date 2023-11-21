@@ -66,9 +66,6 @@ function setup() {
   startStop.mouseOut(onOut1);
   startStop.mouseClicked(() => {
     strokeWeight(2);
-     // textSize(22);
-     // textFont('Expo');
-     // text('Begin!', 145, 205);
     if (start == null) {
       start = Date.now();
       startStop.html(stopText);
@@ -149,12 +146,18 @@ function draw() {
   
   stroke(0);
   strokeWeight(2);
-  line(550,400,625,250);//left slant (CHANGED)
-  line(786,250,855,400);//right slant (CHANGED)
-  line(625,250,786,250);//top line (CHANGED)
-  line(550,400,550,550);//left verticle (CHANGED)
-  line(550,550,855,550);//bottom line (CHANGED)
-  line(855,400,855,550);//right verticle (CHANGED)
+ // line(550,400,625,250);//left slant (CHANGED)
+  line(550,360,625,210);
+ // line(786,250,855,400);//right slant (CHANGED)
+  line(786,210,855,360);
+ // line(625,250,786,250);//top line (CHANGED)
+  line(625,210,786,210);
+ // line(550,400,550,550);//left verticle (CHANGED)
+  line(550,360,550,510);
+ // line(550,550,855,550);//bottom line (CHANGED)
+  line(550,510,855,510);
+ // line(855,400,855,550);//right verticle (CHANGED)
+  line(855,360,855,510);
   
   point(550,400); 
   point(557.5,385);
