@@ -23,11 +23,11 @@ ul {
 li {
   display: inline;
 }
-canvas {
+/*canvas {
   display: block;
 }  
   
-  /*h2{
+  h2{
     background-color: #CEDEBD;
     border-radius: 20px;
     border-color: #9EB384 ;
