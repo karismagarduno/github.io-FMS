@@ -216,13 +216,13 @@ function draw() {
       path.push(createVector(mouseX, mouseY));
       line(pmouseX, pmouseY, mouseX, mouseY);
 
-     // completedTracing = true;
+      completedTracing = true;
       for (let targetCoord of targetCoordinates) {
-        if (!hasTracedCoordinate(targetCoordinates)) {
+        if (!hasTracedCoordinate(targetCoord)) {
           completedTracing = false;
           break;
-        } else completedTracing = true;
-        break;
+        } //else completedTracing = true;
+        //break;
       }
     }
   
