@@ -1,13 +1,19 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    background:url("../images/tracing2.png") no-repeat center center fixed;
-        -webkit-background-size:cover;
-        -moz-background-size:cover;
-        -o-background-size:cover;
-        background-size:cover;
+html{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background:url("../images/tracing2.png") no-repeat center center fixed;
+     -webkit-background-size:cover;
+     -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
+      /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 110vh; */
+  } 
 
-  }
 ul {
   list-style-type: none;
   margin: 0;
@@ -17,4 +23,16 @@ ul {
 li {
   display: inline;
 }
-
+canvas {
+  display: block;
+}  
+  
+  /*h2{
+    background-color: #CEDEBD;
+    border-radius: 20px;
+    border-color: #9EB384 ;
+    text-align: center;
+    height: 75px;
+    width: 300px;
+  }*/
+  
