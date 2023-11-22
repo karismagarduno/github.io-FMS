@@ -98,7 +98,7 @@ function setup() {
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mouseClicked(() => {
-    accumulateTime = true;
+    accumulateTime = false;
     start = null;
     startStop.html(startText);
     resetTracing();
