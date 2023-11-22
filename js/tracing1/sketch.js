@@ -39,7 +39,7 @@ const targetCoordinates = [
 ];
 
 function setup() {
-  createCanvas(1000, 700);
+  createCanvas(1000, 600);
   clear();
   cursor(CROSS);
   
