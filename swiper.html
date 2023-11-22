@@ -7,25 +7,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap">
     <link rel="stylesheet" type="text/css" href="css/swiper.css">
-    <script src="js/tracing/libraries/p5.min.js"></script>
-    <script src="js/tracing/libraries/p5.sound.min.js"></script>
+    <script src="js/swiper/libraries/p5.min.js"></script>
+    <script src="js/swiper/libraries/p5.sound.min.js"></script>
 </head>
 <body onload="showAlert()">
-    <script src="js/swiper/sketch.js"></script>
-    <div>
-        <ul class="homebutton">
-            <li><a href="index.html"><img src= "images/home.png" width ="50" height="50"></a></li>
-            <li><a href= "activites.html"><img src= "images/flower .png" width ="50" height="50"></a></li>
-        </ul>
-    </div>
     <h1>Swiper</h1>
-    <div id = "mydiv">
-       <button class = "btn start" id = "Start">Start</button>
-        <button class = "btn" id = "Reset">Reset</button>
-       <button class = "btn" id = "Next" disabled> Level 2</button>
-     </div>
-    <div id="timerDisplay" style = "font-size: 20px;">Time remaining: <span id="timerValue"></span></div>
-    <main>
-    </main>
+   <div id = "mydiv">
+    <button class = "btn start" id = "Start">Start</button>
+     <button class = "btn" id = "Reset">Reset</button>
+    <button class = "btn" id = "Next" disabled> Level 2</button>
+  </div>
+ <style>
+ #swipeArea {
+      top: 100px; ;
+      left: 515px ;
+         width: 100px;
+         height: 300px;
+   
+        
+         margin: 50px;
+         overflow: hidden;
+     }
+#indicator {
+         position: absolute;
+         top: 95%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         font-size: 16px;
+     }          
+
+
+
+ </style>
+ <script>
+ var header = document.getElementById("mydiv");
+   var btns = header.getElementsByClassName("btn");
+   for(var i = 0; i < btns.length; i++){
+     btns[i].addEventListener("click", function(){
+       var current = 
+           document.getElementsByClassName("start");
+       current[0].className=
+         current[0].className.replace("start", "");
+       this.className += " start";
+     });
+   }
+ </script>
+  <div id="timerDisplay">Time remaining: <span id="timerValue"></span></div>
+
+ <script>
+     // JavaScript code to handle button clicks and manage the timer
+     document.getElementById('Start').addEventListener('click', startTimer);
+     document.getElementById('Reset').addEventListener('click', resetTimer);
+
+     var countdown; // Variable to hold the setInterval reference
+
+     function startTimer() {
+         // Set the duration of the timer in seconds
+         var durationInSeconds = 10;
+
+         // Get references to HTML elements
+         var timerDisplay = document.getElementById('timerDisplay');
+         var timerValue = document.getElementById('timerValue');
+
+         // Display initial time
+         timerValue.textContent = durationInSeconds;
+
+         // Start the timer
+         countdown = setInterval(function() {
+             durationInSeconds--;
+
+             if (durationInSeconds >= 0) {
+                 // Update the timer display
+                 timerValue.textContent = durationInSeconds;
+             } else {
+                 // Timer has reached zero
+                 clearInterval(countdown);
+                 timerDisplay.textContent = 'Time is up!';
+             }
+         }, 1000);
+     }
+
+     function resetTimer() {
+         // Clear the interval and reset the display
+         clearInterval(countdown);
+         document.getElementById('timerDisplay').textContent = 'Timer reset';
+         document.getElementById('timerValue').textContent = '';
+     }
+ </script>
+
+<div id="swipeArea">
+ <div id="indicator">Swipe here</div>
+</div>
+
+
+
+ <main>
+ </main>
+ <script src="js/swiper/sketch.js"></script>
 </body>
 </html>
+
