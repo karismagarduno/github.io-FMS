@@ -54,6 +54,7 @@ function setup() {
   startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
+  startHere.style('background-color', '#FFFFFF');
   
   let homeButton = createButton('Back to Level 1'); // takes the player back to the home page
   homeButton.position(950, 410);
