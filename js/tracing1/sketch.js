@@ -62,6 +62,7 @@ function setup() {
   homeButton.style('font-family', 'Expo');
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
+  homeButton.style('background-color', '#FFFFFF');
   homeButton.mousePressed(goToAnotherPage);
   
   o = createElement("h1"); // the placeholder for the timer 
@@ -96,6 +97,7 @@ function setup() {
   resetButton.size(200, 50);
   resetButton.style('font-family', 'Expo');
   resetButton.style('font-size', '25px');
+  resetButton.style('background-color', '#FFFFFF');
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mouseClicked(() => {
