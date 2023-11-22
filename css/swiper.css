@@ -73,3 +73,10 @@ h1{
             border-style: solid;
             border-color: transparent transparent black transparent;
         }
+</style>
+</head>
+<body>
+
+  <!-- HTML element for the dashed arrow -->
+    <div class="dashed-arrow"></div>
+
