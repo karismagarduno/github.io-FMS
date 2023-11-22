@@ -5,27 +5,20 @@ let isDrawing = false; // Flag to track if the user is drawing
 let tracedCoordinates = []; // Array to store traced coordinates
 let startTime; // Variable to store the start time
 let elapsedTime = 0; // Variable to store the elapsed time
-let score = 0; 
+let score = 0;
+let playerScore = 0;
 
 const circleRadius = 150; // Radius of the circle
 
 const targetCoordinates = [];
 
-// Table to store progress and scores
-//  var progressTable = 
-// 'attempt: 1, time: ${elapsedTime}' ,
-//    { attempt: 2, time: 0 },
-//   { attempt: 3, time: 0 },
-//  ];
-//  var att1 = progressTable[0][0] + progressTable[0][1];
+
 
 function setup() {
   createCanvas(1000, 700);
   strokeWeight(5);
   stroke(0, 0, 0);
   cursor(CROSS);
-  textFont('Merriweather'); 
-
 
   // Initialize targetCoordinates using cos and sin within setup
   for (let angle = 45; angle <= 225; angle += 90) {
@@ -51,43 +44,40 @@ function setup() {
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mousePressed(resetTracing);
-  
+
   let nextButton = createButton('Next');
   nextButton.size(200, 50);
-  nextButton.position(950,360);
+  nextButton.position(950, 360);
   nextButton.style("font-size", "25px");
   nextButton.style('background-color', '#FFFFFF');
   nextButton.mouseOver(onHover3);
   nextButton.mouseOut(onOut3);
   nextButton.mousePressed(goToAnotherPage);
-  
-  function onHover1() {
-  // Change the button's color when hovered over
-  startButton.style('background-color', '#9EB384');
-}
 
-function onOut1() {
-  // Change the button's color when the mouse leaves
-  startButton.style('background-color', '#FFFFFF');
-}
+  function onHover1() {
+    startButton.style('background-color', '#9EB384');
+  }
+
+  function onOut1() {
+    startButton.style('background-color', '#FFFFFF');
+  }
+
   function onHover2() {
-  // Change the button's color when hovered over
-  resetButton.style('background-color', '#9EB384');
-}
+    resetButton.style('background-color', '#9EB384');
+  }
 
   function onOut2() {
-  // Change the button's color when the mouse leaves
-  resetButton.style('background-color', '#FFFFFF');
-}
-  function onHover3() {
-  // Change the button's color when hovered over
-  nextButton.style('background-color', '#9EB384');
-}
+    resetButton.style('background-color', '#FFFFFF');
+  }
 
-function onOut3() {
-  // Change the button's color when the mouse leaves
-  nextButton.style('background-color', '#FFFFFF');
-}
+  function onHover3() {
+    nextButton.style('background-color', '#9EB384');
+  }
+
+  function onOut3() {
+    nextButton.style('background-color', '#FFFFFFF');
+  }
+
   function goToAnotherPage() {
     window.location.href = 'tracing1.html'; // Replace with the URL of the target page
   }
@@ -159,22 +149,18 @@ function draw() {
       }
 
       if (completedTracing) {
-        print(completedTracing)
-         if (score > elapsedTime || score == 0){
-                   score = elapsedTime;
-         }
+        if (score > elapsedTime || score == 0) {
+          score = elapsedTime;
+        }
 
         textSize(25);
         fill(67, 83, 52);
         strokeWeight(5);
         textAlign(CENTER, CENTER);
-        text('Tracing Completed!', 700, 400);
+        //text('Tracing Completed!', 700, 400);
         // Stop the timer when tracing is complete
         elapsedTime = millis() - startTime;
         isTracing = false; // Stop tracing
-      } else {
-        // If tracing is not complete, reset the elapsed time
-        elapsedTime = millis() - startTime;
       }
 
       noFill();
@@ -184,15 +170,25 @@ function draw() {
       }
       endShape();
     }
+  } else {
+    // Display the "Tracing Completed!" text when not tracing
+    if (score > 0) {
+      textSize(25);
+      fill(67, 83, 52);
+      strokeWeight(5);
+      textAlign(CENTER, CENTER);
+      text('Tracing Completed!', 700, 400);
+      //tracing completed should be gone once the reset button is clicked
+      playerScore = score;
+    }
   }
 
   // Display the elapsed time
   fill(255);
   textSize(20);
   textAlign(CENTER, CENTER);
-  text(`Time: ${formatTime(elapsedTime)}`, 700, 600);
-  text(`Score:${formatTime(score)}`, 900, 600);
-
+  text(`Time: ${formatTime(elapsedTime)}`, 550, 600);
+  text(`Score:${formatTime(playerScore)}`, 830, 600);
 }
 
 function hasTracedCoordinate(targetCoord) {
@@ -207,7 +203,7 @@ function hasTracedCoordinate(targetCoord) {
 }
 
 function formatTime(milliseconds) {
-  let seconds = Math.floor(milliseconds / 1000);
+   let seconds = Math.floor(milliseconds / 1000);
   let minutes = Math.floor(seconds / 60);
   seconds = seconds % 60;
   return nf(minutes, 2) + ':' + nf(seconds, 2);
@@ -229,6 +225,9 @@ function resetTracing() {
   tracedCoordinates = [];
   startTime = null; // Reset the start time when the user resets tracing
   elapsedTime = 0; // Reset the elapsed time as well
+  //remove the tracing completed text 
+  score = 0;
+ 
 }
 
 function goToAnotherPage() {
