@@ -1,13 +1,14 @@
-let isTracing = false; // Flag to track if the user is tracing
+//let isTracing = false; // Flag to track if the user is tracing
+let isDrawing = false;
 let traceColor = 50; // Color of the (290, 150) coordinate
 let traceText = ''; // Text to display when tracing
 let path = []; // An array to store the mouse movement path
-//let isDrawing = false; // Flag to track if the user is drawing
 let tracedCoordinates = []; // Array to store traced coordinates
 let accum = 0; // for timer
 let start = null; //for timer 
 let o; // for timer
 let accumulateTime = true;
+let isMouseOnLine = false;
 
 const targetCoordinates = [
   { x: 550, y: 310 },
@@ -38,6 +39,7 @@ const targetCoordinates = [
   { x: 848.1, y: 310},
 ];
 
+
 function setup() {
   createCanvas(1000, 600);
   clear();
@@ -54,7 +56,6 @@ function setup() {
   startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
-  startHere.style('background-color', '#FFFFFF');
   
   let homeButton = createButton('Back to Level 1'); // takes the player back to the home page
   homeButton.position(950, 410);
@@ -63,8 +64,6 @@ function setup() {
   homeButton.style('font-family', 'Expo');
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
-  homeButton.style('background-color', '#FFFFFF');
-  homeButton.mousePressed(goToAnotherPage);
   
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
@@ -98,7 +97,6 @@ function setup() {
   resetButton.size(200, 50);
   resetButton.style('font-family', 'Expo');
   resetButton.style('font-size', '25px');
-  resetButton.style('background-color', '#FFFFFF');
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mouseClicked(() => {
@@ -135,12 +133,11 @@ function onOut3() {
   // Change the button's color when the mouse leaves
   homeButton.style('background-color', '#FFFFFF');
 }
- function goToAnotherPage() {
-    window.location.href = 'tracing.html'; // Replace with the URL of the target page
-  }
-}
 
+}  
+  
 function draw() {
+  
   // code that programs the timer
   if (accumulateTime) 
 {  
@@ -195,28 +192,28 @@ function draw() {
   point(848.1,295);
   point(855,310);
   
+  const bad = 'Don\'t give up';
+  const good = "Keep it up!!!!!";
+  enc = createButton(bad);
+  enc.position(625,310);
+  enc.style('stroke', '3');
+  enc.style('font-family', 'Expo');
+  enc.style('font-size', '26px')
+  
   // gives encouragement  
     if (isMouseOnLine)
     {
-      strokeWeight(2);
-      textSize(26);
-      textFont('Expo');
-      text('Keep it up!!!', 640, 320);
-      //isDrawing = true;
-      isTracing = true;
+      enc.html(good);
+      isDrawing = true;
     } else {
-      strokeWeight(2);
-      textSize(26);
-      textFont('Expo');
-      text('Don\'t give up!!!', 630, 320);
-      //isDrawing = false;
-      isTracing = false;
+      enc.html(bad);
+      isDrawing = false;
     }
 
   let completedTracing = false;
   
   // creates a moving line behind the user's mouse if they are hovering over the perimeter
-    if (isTracing) 
+    if (isDrawing) 
     {
      stroke('rgba(10,120,70, 0.5)');
       path.push(createVector(mouseX, mouseY));
@@ -227,8 +224,7 @@ function draw() {
         if (!hasTracedCoordinate(targetCoord)) {
           completedTracing = false;
           break;
-        } //else completedTracing = true;
-        //break;
+        }
       }
     }
   
@@ -252,17 +248,16 @@ function draw() {
 
 function startTracing() {
 //  isTracing = true;
-  isTracing = false;
+  isDrawing = true;
   path = [];
- // isDrawing = false;
   tracedCoordinates = [];
 }
 
 function resetTracing() {
-  isTracing = false;
+  //isTracing = false;
   textSize(18);
   text(' ', 50, 300);
-//  isDrawing = false;
+  isDrawing = false;
   tracedCoordinates = [];
 }
 
