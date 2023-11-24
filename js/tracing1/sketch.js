@@ -195,7 +195,8 @@ function draw() {
   const bad = 'Don\'t give up';
   const good = "Keep it up!!!!!";
   enc = createButton(bad);
-  enc.position(625,310);
+  enc.position(630,420);
+  enc.style('background-color', '#9EB384');
   enc.style('stroke', '3');
   enc.style('font-family', 'Expo');
   enc.style('font-size', '26px')
