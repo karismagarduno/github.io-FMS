@@ -1,4 +1,4 @@
-html, body {
+html{
   margin: 0;
   padding: 0;
 }
@@ -13,14 +13,27 @@ canvas {
   display: block;
 }
 
-body {
-  margin: 0px;
-  background: #9EB384;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 250px;
-  left: 50px;
+body{
+  background:url("../images/swiperbackground.png") no-repeat center center fixed;
+     -webkit-background-size:cover;
+     -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
+      /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 110vh; */
+  } 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  
+li {
+  display: inline;
+}
 }
 .btn{
   padding: 20px 32px;
@@ -41,16 +54,6 @@ body {
   color: #CEDEBD;
   box-shadow: 0 0 26px 1px green;
   border: 1px solid green;
-}
-h1{
-  position: fixed;
-  top: 0;
-  font-size: 50px;
-  display: inline-block;
-  border: 1px solid black;
-  border-width: 2px solid #CEDEBD;
-  background: #CEDEBD;
-
 }
  .dashed-arrow {
             position: relative;
