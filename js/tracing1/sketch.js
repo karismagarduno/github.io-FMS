@@ -68,7 +68,7 @@ function setup() {
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
   const startText = "Start";
-  const stopText = "Stop";
+  //const stopText = "Stop";
   const resetText = "Reset";
   const startStop = createButton(startText); // start and stop button 
   startStop.position(250, 410);
@@ -82,14 +82,14 @@ function setup() {
     strokeWeight(2);
     if (start == null) {
       start = Date.now();
-      startStop.html(stopText);
       startTracing();
-    } else {
-      accum += Date.now() - start;
-      start = null;
-      startStop.html(startText);
-      resetTracing();
-    }
+      // startStop.html(stopText);
+    // } else {
+    //   accum += Date.now() - start;
+    //   start = null;
+    // //  startStop.html(startText);
+    //   resetTracing();
+    // }
     }
   );
   const resetButton = createButton(resetText); // reset button to set the timer to zero and reset the tracing             
@@ -99,12 +99,13 @@ function setup() {
   resetButton.style('font-size', '25px');
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
-  resetButton.mouseClicked(() => {
-    accumulateTime = false;
-    start = null;
-    startStop.html(startText);
-    resetTracing();
-  });
+  resetButton.mouseClicked(resetTracing());
+  // resetButton.mouseClicked(() => {
+  //   accumulateTime = false;
+  //   start = null;
+  //   startStop.html(startText);
+  //   resetTracing();
+  // });
   
   function onHover1() { 
   // Change the button's color when hovered over
@@ -260,6 +261,8 @@ function resetTracing() {
   text(' ', 50, 300);
   isDrawing = false;
   tracedCoordinates = [];
+  accumulateTime = false;
+  start = null;
 }
 
 function hasTracedCoordinate(targetCoord) {
