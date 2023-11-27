@@ -99,7 +99,7 @@ function setup() {
   resetButton.style('font-size', '25px');
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
-  resetButton.mouseClicked(resetTracing());
+  resetButton.mouseClicked(resetTracing);
   // resetButton.mouseClicked(() => {
   //   accumulateTime = false;
   //   start = null;
