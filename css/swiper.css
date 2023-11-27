@@ -55,8 +55,7 @@ h1{
  .dashed-arrow {
             position: relative;
             left: 1px;
-   bottom: -200px;
-       
+            bottom: -200px;
             width: 3;
             height: 250px; /* Adjust the height as needed */
             border-left: 10px dashed black; /* Adjust the border properties as needed */
