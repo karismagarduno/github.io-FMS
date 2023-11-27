@@ -83,13 +83,13 @@ function setup() {
     if (start == null) {
       start = Date.now();
       startTracing();
-      // startStop.html(stopText);
-    // } else {
-    //   accum += Date.now() - start;
-    //   start = null;
-    // //  startStop.html(startText);
-    //   resetTracing();
-    // }
+     // startStop.html(stopText);
+    } else {
+      accum += Date.now() - start;
+      start = null;
+    //  startStop.html(startText);
+      resetTracing();
+    }
     }
   );
   const resetButton = createButton(resetText); // reset button to set the timer to zero and reset the tracing             
@@ -100,12 +100,12 @@ function setup() {
   resetButton.mouseOver(onHover2);
   resetButton.mouseOut(onOut2);
   resetButton.mouseClicked(resetTracing);
-  // resetButton.mouseClicked(() => {
-  //   accumulateTime = false;
-  //   start = null;
-  //   startStop.html(startText);
-  //   resetTracing();
-  // });
+  resetButton.mouseClicked(() => {
+    accumulateTime = false;
+    start = null;
+    startStop.html(startText);
+    resetTracing();
+  });
   
   function onHover1() { 
   // Change the button's color when hovered over
