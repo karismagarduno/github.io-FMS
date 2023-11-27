@@ -1,4 +1,4 @@
-html{
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -12,32 +12,15 @@ div{
 canvas {
   display: block;
 }
-h1{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-body{
-  background:url("../images/swiperbackground.png") no-repeat center center fixed;
-     -webkit-background-size:cover;
-     -moz-background-size:cover;
-      -o-background-size:cover;
-      background-size:cover;
-      /* display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 110vh; */
-  } 
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-  
-li {
-  display: inline;
+body {
+  margin: 0px;
+  background: #9EB384;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 250px;
+  left: 50px;
 }
 .btn{
   padding: 20px 32px;
@@ -58,6 +41,12 @@ li {
   color: #CEDEBD;
   box-shadow: 0 0 26px 1px green;
   border: 1px solid green;
+}
+h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
  .dashed-arrow {
             position: relative;
@@ -86,4 +75,3 @@ li {
 
   <!-- HTML element for the dashed arrow -->
     <div class="dashed-arrow"></div>
-
