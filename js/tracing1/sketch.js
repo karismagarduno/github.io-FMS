@@ -197,6 +197,7 @@ function draw() {
   enc = createButton(bad);
   enc.position(630,420);
   enc.style('background-color', '#CEDEBD');
+  enc.noStroke();
   enc.style('font-family', 'Expo');
   enc.style('font-size', '26px')
   
