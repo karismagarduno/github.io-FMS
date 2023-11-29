@@ -226,7 +226,7 @@ function resetTracing() {
   startTime = null; // Reset the start time when the user resets tracing
   elapsedTime = 0; // Reset the elapsed time as well
   //remove the tracing completed text 
-  score = 0;
+  //score = 0;
  
 }
 
