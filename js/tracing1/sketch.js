@@ -56,6 +56,7 @@ function setup() {
   startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
+  startHere.style('background-color', '#FFFFFF');
   
   let homeButton = createButton('Back to Level 1'); // takes the player back to the home page
   homeButton.position(950, 410);
@@ -64,6 +65,7 @@ function setup() {
   homeButton.style('font-family', 'Expo');
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
+  homeButton.style('background-color', '#FFFFFF');
   
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
@@ -92,6 +94,7 @@ function setup() {
   stopButton.size(200, 50);
   stopButton.style('font-family', 'Expo');
   stopButton.style('font-size', '25px');
+  stopButton.style('background-color', '#FFFFFF');
   stopButton.mouseOver(onHover2);
   stopButton.mouseOut(onOut2);
   stopButton.mouseClicked(() => {
