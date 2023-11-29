@@ -68,8 +68,8 @@ function setup() {
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
   const startText = "Start";
-  //const stopText = "Stop";
   const resetText = "Reset";
+  const stopText = "Stop";
   const startStop = createButton(startText); // start and stop button 
   startStop.position(250, 410);
   startStop.size(200, 50);
@@ -82,28 +82,23 @@ function setup() {
     strokeWeight(2);
     if (start == null) {
       start = Date.now();
+      accumulateTime  = true;
       startTracing();
-     // startStop.html(stopText);
-    } else {
-      accum += Date.now() - start;
-      start = null;
-    //  startStop.html(startText);
-      resetTracing();
-    }
+    } 
     }
   );
-  const resetButton = createButton(resetText); // reset button to set the timer to zero and reset the tracing             
-  resetButton.position(950,350);
-  resetButton.size(200, 50);
-  resetButton.style('font-family', 'Expo');
-  resetButton.style('font-size', '25px');
-  resetButton.mouseOver(onHover2);
-  resetButton.mouseOut(onOut2);
-  resetButton.mouseClicked(resetTracing);
-  resetButton.mouseClicked(() => {
-    accumulateTime = false;
+  const stopButton = createButton(stopText); // reset button to set the timer to zero and reset the tracing             
+  stopButton.position(950,350);
+  stopButton.size(200, 50);
+  stopButton.style('font-family', 'Expo');
+  stopButton.style('font-size', '25px');
+  stopButton.mouseOver(onHover2);
+  stopButton.mouseOut(onOut2);
+  stopButton.mouseClicked(() => {
     start = null;
-    startStop.html(startText);
+    isDrawing = false;
+    path = [];
+    startStop.html(resetText);
     resetTracing();
   });
   
@@ -118,12 +113,12 @@ function setup() {
 }
   function onHover2() {
   // Change the button's color when hovered over
-  resetButton.style('background-color', '#9EB384');
+  stopButton.style('background-color', '#9EB384');
 }
 
   function onOut2() {
   // Change the button's color when the mouse leaves
-  resetButton.style('background-color', '#FFFFFF');
+  stopButton.style('background-color', '#FFFFFF');
 }
   function onHover3() {
   // Change the button's color when hovered over
