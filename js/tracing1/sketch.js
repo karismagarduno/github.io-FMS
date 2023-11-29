@@ -103,6 +103,7 @@ function setup() {
     path = [];
     startStop.html(resetText);
     resetTracing();
+    endShape();
   });
   
   function onHover1() { 
