@@ -66,6 +66,7 @@ function setup() {
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
   homeButton.style('background-color', '#FFFFFF');
+  homeButton.mousePressed(goToAnotherPage);
   
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
@@ -133,7 +134,9 @@ function onOut3() {
   // Change the button's color when the mouse leaves
   homeButton.style('background-color', '#FFFFFF');
 }
-
+function goToAnotherPage() {
+    window.location.href = 'tracing.html'; // Replace with the URL of the target page
+}
 }  
   
 function draw() {
