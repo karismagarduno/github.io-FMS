@@ -114,6 +114,7 @@ function setup() {
   startStop.mouseOut(onOut1);
   startStop.mouseClicked(() => {
     strokeWeight(2);
+    fin.html(nothing);
     if (start == null) {
       start = Date.now();
       accumulateTime  = true;
