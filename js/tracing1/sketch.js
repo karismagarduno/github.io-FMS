@@ -69,7 +69,7 @@ function setup() {
     fill('rgba(10,120,70, 0.5)');
     stroke('rgba(10,120,70, 0.5)');
     textSize(26);
-    text('Great job!', 643, 130);
+    text('Great job!', 690, 130);
     if (score > elapsedTime || score == 0) {
           score = elapsedTime;
         }
