@@ -77,6 +77,11 @@ function setup() {
   finish.mouseOut(onOut4);
   finish.mouseClicked(() => {
     fin.html(done);
+    start = null;
+    isDrawing = false;
+    path = [];
+    startStop.html(resetText);
+    endShape();
     if (score > elapsedTime || score == 0) {
           score = elapsedTime;
         }
@@ -122,23 +127,23 @@ function setup() {
     } 
     }
   );
-  const stopButton = createButton(stopText); // reset button to set the timer to zero and reset the tracing             
-  // stopButton.position(950,350);
-  stopButton.position(250,410);
-  stopButton.size(200, 50);
-  stopButton.style('font-family', 'Expo');
-  stopButton.style('font-size', '25px');
-  stopButton.style('background-color', '#FFFFFF');
-  stopButton.mouseOver(onHover2);
-  stopButton.mouseOut(onOut2);
-  stopButton.mouseClicked(() => {
-    start = null;
-    isDrawing = false;
-    path = [];
-    startStop.html(resetText);
-    //resetTracing();
-    endShape();
-  });
+  // const stopButton = createButton(stopText); // reset button to set the timer to zero and reset the tracing             
+  // // stopButton.position(950,350);
+  // stopButton.position(250,410);
+  // stopButton.size(200, 50);
+  // stopButton.style('font-family', 'Expo');
+  // stopButton.style('font-size', '25px');
+  // stopButton.style('background-color', '#FFFFFF');
+  // stopButton.mouseOver(onHover2);
+  // stopButton.mouseOut(onOut2);
+  // stopButton.mouseClicked(() => {
+  //   start = null;
+  //   isDrawing = false;
+  //   path = [];
+  //   startStop.html(resetText);
+  //   //resetTracing();
+  //   endShape();
+  // });
   
   function onHover1() { 
   // Change the button's color when hovered over
