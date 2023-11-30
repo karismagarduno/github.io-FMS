@@ -102,6 +102,7 @@ function setup() {
   homeButton.style('background-color', '#FFFFFF');
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
+  homeButton.mousePressed(goToAnotherPage);
   
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
