@@ -52,21 +52,34 @@ function setup() {
   // instructions.style('font-size', '19px');
   // instructions.style('font-family', 'Expo');
   
+  let finish = createButton('Finish');
+  finish.position(950,350);
+  finish.style('font-size', '25px');
+  finish.style('font-family', 'Expo');
+  finish.size(200, 50);
+  finish.style('background-color', '#FFFFFF');
+  finish.mouseOver(onHover4);
+  finish.mouseOut(onOut4);
+  finish.mouseClicked(() => {
+    fill('rgba(10,120,70, 0.5)');
+    stroke('rgba(10,120,70, 0.5)');
+    textSize(26);
+    text('Great job!', 643, 130);
+  });
+  
   let startHere = createButton('^ Start Here... Move This Way >'); // starting point for the player (doesn't activate anything)
   startHere.position(550, 610);
   startHere.style('font-size', '11px');
   startHere.style('font-family', 'Expo');
-  startHere.style('background-color', '#FFFFFF');
   
   let homeButton = createButton('Back to Level 1'); // takes the player back to the home page
   homeButton.position(950, 410);
   homeButton.size(200, 50);
   homeButton.style('font-size', '25px'); 
   homeButton.style('font-family', 'Expo');
+  homeButton.style('background-color', '#FFFFFF');
   homeButton.mouseOver(onHover3);
   homeButton.mouseOut(onOut3);
-  homeButton.style('background-color', '#FFFFFF');
-  homeButton.mousePressed(goToAnotherPage);
   
   o = createElement("h1"); // the placeholder for the timer 
   o.position(660,650);
@@ -74,7 +87,8 @@ function setup() {
   const resetText = "Reset";
   const stopText = "Stop";
   const startStop = createButton(startText); // start and stop button 
-  startStop.position(250, 410);
+  //startStop.position(250, 410);
+  startStop.position(250, 350);
   startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
   startStop.style('font-size', '25px');
@@ -91,7 +105,8 @@ function setup() {
     }
   );
   const stopButton = createButton(stopText); // reset button to set the timer to zero and reset the tracing             
-  stopButton.position(950,350);
+  // stopButton.position(950,350);
+  stopButton.position(250,410);
   stopButton.size(200, 50);
   stopButton.style('font-family', 'Expo');
   stopButton.style('font-size', '25px');
@@ -133,6 +148,16 @@ function setup() {
 function onOut3() {
   // Change the button's color when the mouse leaves
   homeButton.style('background-color', '#FFFFFF');
+}
+
+function onHover4() {
+  // Change the button's color when hovered over
+  finish.style('background-color', '#9EB384');
+}
+
+function onOut4() {
+  // Change the button's color when the mouse leaves
+  finish.style('background-color', '#FFFFFF');
 }
 function goToAnotherPage() {
     window.location.href = 'tracing.html'; // Replace with the URL of the target page
