@@ -120,6 +120,7 @@ function setup() {
   startStop.mouseClicked(() => {
     strokeWeight(2);
     fin.html(nothing);
+    startShape();
     if (start == null) {
       start = Date.now();
       accumulateTime  = true;
