@@ -60,12 +60,12 @@ function setup() {
   const nothing = '';
   const done= "Great job!";
   fin = createButton(nothing);
-  fin.position(705,200);
+  fin.position(650,280);
   fin.style('background-color', '#CEDEBD');
   fin.style('border', 'none');
   fin.style('stroke', '3');
   fin.style('font-family', 'Expo');
-  fin.style('font-size', '26px');
+  fin.style('font-size', '28px');
   
   let finish = createButton('Finish');
   finish.position(950,350);
@@ -256,12 +256,12 @@ function draw() {
   const bad = 'Don\'t give up';
   const good = "Keep it up!!!!!";
   enc = createButton(bad);
-  enc.position(633,400);
+  enc.position(625,400);
   enc.style('background-color', '#CEDEBD');
   enc.style('border', 'none');
   enc.style('stroke', '3');
   enc.style('font-family', 'Expo');
-  enc.style('font-size', '26px')
+  enc.style('font-size', '28px')
   
   // gives encouragement  
     if (isMouseOnLine)
