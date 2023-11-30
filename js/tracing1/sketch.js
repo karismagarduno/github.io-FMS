@@ -44,18 +44,10 @@ const targetCoordinates = [
   { x: 848.1, y: 310},
 ];
 
-
 function setup() {
   createCanvas(1000, 600);
   clear();
   cursor(CROSS);
-  
-  // let instructions = createButton('Try to beat your fastest time!');
-  // instructions.position(635, 210);
-  // instructions.size(200, 50);
-  // instructions.style('background-color', '#FFFFFF');
-  // instructions.style('font-size', '19px');
-  // instructions.style('font-family', 'Expo');
 
   const nothing = '';
   const done= "Great job!";
@@ -110,7 +102,6 @@ function setup() {
   const resetText = "Reset";
   const stopText = "Stop";
   const startStop = createButton(startText); // start and stop button 
-  //startStop.position(250, 410);
   startStop.position(250, 350);
   startStop.size(200, 50);
   startStop.style('font-family', 'Expo');
@@ -128,23 +119,6 @@ function setup() {
     } 
     }
   );
-  // const stopButton = createButton(stopText); // reset button to set the timer to zero and reset the tracing             
-  // // stopButton.position(950,350);
-  // stopButton.position(250,410);
-  // stopButton.size(200, 50);
-  // stopButton.style('font-family', 'Expo');
-  // stopButton.style('font-size', '25px');
-  // stopButton.style('background-color', '#FFFFFF');
-  // stopButton.mouseOver(onHover2);
-  // stopButton.mouseOut(onOut2);
-  // stopButton.mouseClicked(() => {
-  //   start = null;
-  //   isDrawing = false;
-  //   path = [];
-  //   startStop.html(resetText);
-  //   //resetTracing();
-  //   endShape();
-  // });
   
   function onHover1() { 
   // Change the button's color when hovered over
@@ -191,19 +165,6 @@ function onOut4() {
 }  
   
 function draw() {
-  
-  // code that programs the timer
-  
-//   if (accumulateTime) 
-// {  
-//   const totalMillis = accum + (start != null ? Date.now() - start : 0);
-//   const s = Math.floor(totalMillis / 1000) % 60;
-//   const m = Math.floor(totalMillis / 1000 / 60) % 60;
-//   const string = `Time: ${nf(m, 2)}:${nf(s, 2)}`;
-//   o.html(string);
-//   o.style('font-size', '20px')
-// }
-
   // check to see if the user is hovering over the lines drawn
   if(((mouseX>=545 && mouseX<=900) && (mouseY>=455 && mouseY<=465)) || ((mouseX>=545 && mouseX<=555) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=850 && mouseX<=860) && (mouseY>=305 && mouseY<=465)) || ((mouseX>=620 && mouseX<=791) && (mouseY>=155 && mouseY<=165)) || ((mouseX>=550 && mouseX<=557.5) && (mouseY<=310 && mouseY>=295)) || ((mouseX>=557.5 && mouseX<=565) && (mouseY<=295 && mouseY>=280)) || ((mouseX>=565 && mouseX<=572.5) && (mouseY<=280 && mouseY>=265)) || ((mouseX>=572.5 && mouseX<=580) && (mouseY<=265 && mouseY>=250)) ||((mouseX>=587.5 && mouseX<=595) && (mouseY<=235 && mouseY>=220)) ||
 ((mouseX>=595 && mouseX<=602.5) && (mouseY>=220 && mouseY<=205)) ||
@@ -290,23 +251,7 @@ function draw() {
         if (!hasTracedCoordinate(targetCoord)) {
           completedTracing = false;
           break;
-         // } else completedTracing = true;
         }
-        
-//         if (completedTracing) {
-//         if (score > elapsedTime || score == 0) {
-//           score = elapsedTime;
-//         }
-
-//         textSize(25);
-//         fill(67, 83, 52);
-//         strokeWeight(5);
-//         textAlign(CENTER, CENTER);
-//         //text('Tracing Completed!', 700, 400);
-//         // Stop the timer when tracing is complete
-//         elapsedTime = millis() - startTime;
-//         isTracing = false; // Stop tracing
-//       }
       }
   
      stroke('rgba(10,120,70, 0.5)');
@@ -329,12 +274,6 @@ function draw() {
       endShape();
     }
   if (score > 0) {
-      // textSize(25);
-      // fill(67, 83, 52);
-      // strokeWeight(5);
-      // textAlign(CENTER, CENTER);
-      // text('Tracing Completed!', 700, 400);
-      //tracing completed should be gone once the reset button is clicked
       playerScore = score;
   }
   
@@ -343,7 +282,6 @@ function draw() {
   textAlign(CENTER, CENTER);
   text(`Time: ${time(elapsedTime)}`, 555, 550);
   text(`Score:${time(playerScore)}`, 830, 550);
-
 }
 
 function time(mili){
@@ -353,20 +291,7 @@ if (accumulateTime)
   let minutes = Math.floor(seconds / 60);
   seconds = seconds % 60;
   return nf(minutes, 2) + ':' + nf(seconds, 2);
-  // const totalMillis = accum + (start != null ? Date.now() - start : 0);
-  // const s = Math.floor(totalMillis / 1000) % 60;
-  // const m = Math.floor(totalMillis / 1000 / 60) % 60;
-  // const string = `Time: ${nf(m, 2)}:${nf(s, 2)}`;
-  // o.html(string);
-  // o.style('font-size', '20px')
 }
-}
-
-function formatTime(milliseconds) {
-   let seconds = Math.floor(milliseconds / 1000);
-  let minutes = Math.floor(seconds / 60);
-  seconds = seconds % 60;
-  return nf(minutes, 2) + ':' + nf(seconds, 2);
 }
 
 function startTracing() {
@@ -399,8 +324,3 @@ function hasTracedCoordinate(targetCoord) {
   }
   return false;
 }
-
-// function showAlert()
-// {
-//   alert("Once you click start, you will have 10 seconds to get as many swipes!");
-// }
