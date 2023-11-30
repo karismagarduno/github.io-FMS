@@ -183,6 +183,10 @@ function onOut4() {
   // Change the button's color when the mouse leaves
   finish.style('background-color', '#FFFFFF');
 }
+
+  function goToAnotherPage() {
+    window.location.href = 'tracing.html'; // Replace with the URL of the target page
+}
   
 }  
   
