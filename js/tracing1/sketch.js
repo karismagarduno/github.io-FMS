@@ -336,7 +336,7 @@ function draw() {
   fill(255);
   textSize(20);
   textAlign(CENTER, CENTER);
-  text(`Time: ${time(elapsedTime)}`, 550, 550);
+  text(`Time: ${time(elapsedTime)}`, 555, 550);
   text(`Score:${time(playerScore)}`, 830, 550);
 
 }
