@@ -75,7 +75,7 @@ function setup() {
   }
 
   function onOut3() {
-    nextButton.style('background-color', '#FFFFFFF');
+    nextButton.style('background-color', '#FFFFFF');
   }
 
   function goToAnotherPage() {
