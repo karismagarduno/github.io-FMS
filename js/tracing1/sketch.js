@@ -60,7 +60,7 @@ function setup() {
   const nothing = '';
   const done= "Great job!";
   fin = createButton(nothing);
-  fin.position(650,280);
+  fin.position(650,260);
   fin.style('background-color', '#CEDEBD');
   fin.style('border', 'none');
   fin.style('stroke', '3');
