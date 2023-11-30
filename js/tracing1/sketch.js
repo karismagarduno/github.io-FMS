@@ -56,6 +56,16 @@ function setup() {
   // instructions.style('background-color', '#FFFFFF');
   // instructions.style('font-size', '19px');
   // instructions.style('font-family', 'Expo');
+
+  const nothing = '';
+  const done= "Great job!";
+  fin = createButton(nothing);
+  fin.position(705,130);
+  fin.style('background-color', '#CEDEBD');
+  fin.style('border', 'none');
+  fin.style('stroke', '3');
+  fin.style('font-family', 'Expo');
+  fin.style('font-size', '26px');
   
   let finish = createButton('Finish');
   finish.position(950,350);
@@ -66,10 +76,7 @@ function setup() {
   finish.mouseOver(onHover4);
   finish.mouseOut(onOut4);
   finish.mouseClicked(() => {
-    fill('rgba(10,120,70, 0.5)');
-    stroke('rgba(10,120,70, 0.5)');
-    textSize(26);
-    text('Great job!', 705, 130);
+    fin.html(done);
     if (score > elapsedTime || score == 0) {
           score = elapsedTime;
         }
